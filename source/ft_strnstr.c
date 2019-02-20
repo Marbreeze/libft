@@ -1,12 +1,25 @@
 #include <string.h>
 
-int strncmp(const char  *s1,const char  *s2, size_t n)
+char *ft_strnstr(const char *haystack, const char *needle, size_t len)
 {
     int i = 0;
 
-    while (i < n && s1[i] && s2[i] && s1[i] == s2[i])
+    
+    while(haystack[i])
     {
+        if(needle[0] == haystack[i])
+        {
+            int j = i;
+            size_t g = 0;
+            while(needle[g] == haystack[j] && g < len)
+            {
+                g++;
+                j++;
+            }
+            if (g == len)
+                return (&(haystack[i]));
+        }
         i++;
     }
-    return (s1[i] - s2[i]);
+    return (NULL);
 }

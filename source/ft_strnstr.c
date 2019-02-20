@@ -1,16 +1,12 @@
-int ft_strlen(char  *str)
+#include <string.h>
+
+int strncmp(const char  *s1,const char  *s2, size_t n)
 {
     int i = 0;
 
-     while(str[i])
-     {
+    while (i < n && s1[i] && s2[i] && s1[i] == s2[i])
+    {
         i++;
-     }
-        return (i);
-}
-int ft_strnstr(char *str1,char *str2)
-{
-    int i = 0;
-    if
-
+    }
+    return (s1[i] - s2[i]);
 }

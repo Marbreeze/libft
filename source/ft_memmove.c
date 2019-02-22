@@ -1,17 +1,26 @@
-void *memmove(void *dest, const void *src, size_t n)
-{
-    char *cdst = (char *)dst;
-    char *csrc = (char *)src;
-    char *buffer;
-    int i = 0;
+#include <string.h>
 
-if (i < n)
+void *ft_memmove(void *dest, const void *src, size_t n)
 {
-    while(*csrc && csrc [1][i])
-    {
-        buffer[1][i] = csrc[1][i];
-        cdst[1][i] = buffer[1][i];
-    }
+    char *cdst = (char *)dest;
+    char *csrc = (char *)src;
+    size_t i = 0;
+    int g = 0;
+
+while( i < n && csrc[g])
+{
+    cdst[i] = csrc[g];
     i++;
+    g++;
 }
-return (dest); //not right
+cdst[i] = '\0';
+return (dest);
+}
+int main()
+{
+    char first[50] = "you can finish it";
+    char sec[20] = "finishlib_ft";
+    char *a = ft_memmove(first, sec, 20);
+    printf("%s\n%s\n",ft_memmove(first, sec, 5), memmove(first, sec, 5));
+    return 0;
+}

@@ -1,3 +1,5 @@
+#include <string.h>
+
 char * ft_strnew(size_t size)
 {
     size_t i ;
@@ -6,10 +8,11 @@ char * ft_strnew(size_t size)
     char *fresh;
     fresh = (char *)malloc(size);
     if(!fresh)
+        return (NULL);
     while(fresh[i])
     {
         fresh[i] = '\0';
         i++;
     }
-    return (0);
+    return (fresh);
 }

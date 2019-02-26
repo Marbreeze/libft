@@ -3,18 +3,18 @@
 /*                                                        :::      ::::::::   */
 /*   libft.h                                            :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: mstratu <marvin@42.fr>                     +#+  +:+       +#+        */
+/*   By: mstratu <mstratu@student.42.us.org>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/02/24 23:26:00 by mstratu           #+#    #+#             */
-/*   Updated: 2019/02/24 23:26:19 by mstratu          ###   ########.fr       */
+/*   Updated: 2019/02/25 23:32:56 by mstratu          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #ifndef LIBFT_H
 # define LIBFT_H
-#include <string.h>
-#include <stdlib.h>
-#include <unistd.h>
+# include <string.h>
+# include <stdlib.h>
+# include <unistd.h>
 
 void			*ft_memchr(const void *s, int c, size_t n);
 int				ft_memcmp(const void *s1, const void *s2, size_t n);
@@ -31,7 +31,7 @@ int				ft_memcmp(const void *s1, const void *s2, size_t n);
 size_t			ft_strlen(const char *s);
 char			*ft_strdup(const char *s1);
 char			*ft_strcpy(char *dst, const char *src);
-// char			*ft_strncpy(char *dst, const char *src, size_t len);
+char			*ft_strncpy(char *dst, const char *src, size_t len);
 char			*ft_strcat(char *restrict s1, const char *restrict s2);
 char			*ft_strncat(char *restrict s1, const char *restrict s2,
 	size_t n);

@@ -1,9 +1,21 @@
+/* ************************************************************************** */
+/*                                                                            */
+/*                                                        :::      ::::::::   */
+/*   ft_itoa.c                                          :+:      :+:    :+:   */
+/*                                                    +:+ +:+         +:+     */
+/*   By: mstratu <mstratu@student.42.us.org>        +#+  +:+       +#+        */
+/*                                                +#+#+#+#+#+   +#+           */
+/*   Created: 2019/02/25 23:22:57 by mstratu           #+#    #+#             */
+/*   Updated: 2019/02/25 23:24:38 by mstratu          ###   ########.fr       */
+/*                                                                            */
+/* ************************************************************************** */
+
 #include <string.h>
 #include <stdio.h>
 
-int     get_len(int x)
+int			get_len(int x)
 {
-	int c;
+	int		c;
 
 	if (x == 0)
 		return (1);
@@ -18,11 +30,11 @@ int     get_len(int x)
 	return (c);
 }
 
-char    *ft_itoa(int n)
+char		*ft_itoa(int n)
 {
-	char    *fresh;
-	int     j;
-	
+	char	*fresh;
+	int		j;
+
 	j = get_len(n);
 	fresh = (char *)malloc(sizeof(char) * (j + 1));
 	if (!fresh)
@@ -41,9 +53,4 @@ char    *ft_itoa(int n)
 		j--;
 	}
 	return (fresh);
-}
-
-int main()
-{
-	printf("%s\n", ft_itoa(-5859));
 }

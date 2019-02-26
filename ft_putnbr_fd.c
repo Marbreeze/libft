@@ -1,10 +1,18 @@
+/* ************************************************************************** */
+/*                                                                            */
+/*                                                        :::      ::::::::   */
+/*   ft_putnbr_fd.c                                     :+:      :+:    :+:   */
+/*                                                    +:+ +:+         +:+     */
+/*   By: mstratu <mstratu@student.42.us.org>        +#+  +:+       +#+        */
+/*                                                +#+#+#+#+#+   +#+           */
+/*   Created: 2019/02/25 23:48:20 by mstratu           #+#    #+#             */
+/*   Updated: 2019/02/25 23:48:38 by mstratu          ###   ########.fr       */
+/*                                                                            */
+/* ************************************************************************** */
+
 #include "libft.h"
 
-void ft_putnbr_fd(int n, int fd)
+void	ft_putnbr_fd(int n, int fd)
 {
-    write (fd, ft_itoa(n), ft_strlen(ft_itoa(n)));
+	write(fd, ft_itoa(n), ft_strlen(ft_itoa(n)));
 }
-
-
-
-

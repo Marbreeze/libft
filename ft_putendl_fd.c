@@ -1,7 +1,19 @@
+/* ************************************************************************** */
+/*                                                                            */
+/*                                                        :::      ::::::::   */
+/*   ft_putendl_fd.c                                    :+:      :+:    :+:   */
+/*                                                    +:+ +:+         +:+     */
+/*   By: mstratu <mstratu@student.42.us.org>        +#+  +:+       +#+        */
+/*                                                +#+#+#+#+#+   +#+           */
+/*   Created: 2019/02/25 20:37:50 by mstratu           #+#    #+#             */
+/*   Updated: 2019/02/25 21:45:02 by mstratu          ###   ########.fr       */
+/*                                                                            */
+/* ************************************************************************** */
+
 #include "libft.h"
 
-void ft_putendl_fd(char const *s, int fd)
+void		ft_putendl_fd(char const *s, int fd)
 {
-    write (fd, s, ft_strlen(s));
-    write (fd, "\n", 1);
+	write(fd, s, ft_strlen(s));
+	write(fd, "\n", 1);
 }

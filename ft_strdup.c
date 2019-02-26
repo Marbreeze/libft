@@ -1,17 +1,34 @@
+/* ************************************************************************** */
+/*                                                                            */
+/*                                                        :::      ::::::::   */
+/*   ft_strdup.c                                        :+:      :+:    :+:   */
+/*                                                    +:+ +:+         +:+     */
+/*   By: mstratu <mstratu@student.42.us.org>        +#+  +:+       +#+        */
+/*                                                +#+#+#+#+#+   +#+           */
+/*   Created: 2019/02/25 09:56:17 by mstratu           #+#    #+#             */
+/*   Updated: 2019/02/25 23:38:16 by mstratu          ###   ########.fr       */
+/*                                                                            */
+/* ************************************************************************** */
+
 #include "libft.h"
 
-char *ft_strdup(const char *s)
+char		*ft_strdup(const char *s)
 {
-    int i = 0;
-    int g = 0;
-    char *fresh;
-    fresh = (char *)malloc(sizeof(char) * (ft_strlen(s) + 1));
-    while (s[i])
-    {
-        fresh[g] = s[i];
-        g++;
-        i++;
-    }
-    fresh[g] = '\0';
-    return (fresh);
+	int			i;
+	int			g;
+	char		*fresh;
+
+	i = 0;
+	g = 0;
+	fresh = ((char *)malloc(sizeof(char) * (ft_strlen(s) + 1)));
+	if (!fresh)
+		return (NULL);
+	while (s[i])
+	{
+		fresh[g] = s[i];
+		g++;
+		i++;
+	}
+	fresh[g] = '\0';
+	return (fresh);
 }

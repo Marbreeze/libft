@@ -1,15 +1,30 @@
-#include <stdlib.h>
-void *ft_memcpy(void *restrict dst, const void *restrict src,size_t n)
-{
-   char *csrc = (char *)src; // transform void into a char pointer
-   char *cdst = (char *)dst;
-   
-int   i = 0;
-   while(i < n && i >= 0) //index is smaller then bytesize and the 0
-   {
-     cdst[i] = csrc[i];
-     i++;
-    }
-return (cdst);
+/* ************************************************************************** */
+/*                                                                            */
+/*                                                        :::      ::::::::   */
+/*   ft_memcpy.c                                        :+:      :+:    :+:   */
+/*                                                    +:+ +:+         +:+     */
+/*   By: mstratu <mstratu@student.42.us.org>        +#+  +:+       +#+        */
+/*                                                +#+#+#+#+#+   +#+           */
+/*   Created: 2019/02/24 17:12:11 by mstratu           #+#    #+#             */
+/*   Updated: 2019/02/25 23:36:04 by mstratu          ###   ########.fr       */
+/*                                                                            */
+/* ************************************************************************** */
 
+#include "libft.h"
+
+void	*ft_memcpy(void *dst, const void *src, size_t n)
+{
+	char	*csrc;
+	char	*cdst;
+	size_t	i;
+
+	csrc = (char *)src;
+	cdst = (char *)dst;
+	i = 0;
+	while (i < n && i >= 0)
+	{
+		cdst[i] = csrc[i];
+		i++;
+	}
+	return (cdst);
 }

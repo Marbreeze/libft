@@ -3,17 +3,16 @@
 /*                                                        :::      ::::::::   */
 /*   ft_tolower.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: mstratu <marvin@42.fr>                     +#+  +:+       +#+        */
+/*   By: mstratu <mstratu@student.42.us.org>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/02/12 21:38:06 by mstratu           #+#    #+#             */
-/*   Updated: 2019/02/12 21:38:08 by mstratu          ###   ########.fr       */
+/*   Updated: 2019/02/25 19:50:50 by mstratu          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-
-int	tolower(int c)
+int	ft_tolower(int c)
 {
 	if (c >= 'A' && c <= 'Z')
-		c = c + 32;	
-	return (c); 
+		c = c + 32;
+	return (c);
 }

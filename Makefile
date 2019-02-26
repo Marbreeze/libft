@@ -1,3 +1,5 @@
+
+
 # **************************************************************************** #
 #                                                                              #
 #                                                         :::      ::::::::    #
@@ -23,7 +25,7 @@ SRC += ft_itoa.c ft_memdel.c ft_strchr.c ft_strmap.c ft_strtrim.c
 SRC += ft_memmove.c ft_strclr.c ft_strmapi.c ft_tolower.c	
 SRC += ft_memset.c ft_strcmp.c ft_strncat.c ft_toupper.c	
 SRC += ft_putchar.c ft_strcpy.c ft_strncmp.c	
-SRC += ft_putchar_fd.c ft_strdel.c 
+SRC += ft_putchar_fd.c ft_strdel.c ft_strncpy.c
 
 OBJECTS = *.o
 

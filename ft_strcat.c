@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   ft_strcat.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: mstratu <mstratu@student.42.us.org>        +#+  +:+       +#+        */
+/*   By: mstratu <mstratu@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/02/25 18:43:24 by mstratu           #+#    #+#             */
-/*   Updated: 2019/02/25 23:43:31 by mstratu          ###   ########.fr       */
+/*   Updated: 2019/02/26 15:55:45 by mstratu          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -27,5 +27,6 @@ char	*ft_strcat(char *dest, const char *src)
 		g++;
 		i++;
 	}
+	dest[i] = '\0';
 	return (dest);
 }

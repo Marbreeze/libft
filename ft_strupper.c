@@ -1,32 +1,26 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_putnbr.c                                        :+:      :+:    :+:   */
+/*   ft_strupper.c                                      :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: mstratu <mstratu@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2019/02/25 23:48:50 by mstratu           #+#    #+#             */
-/*   Updated: 2019/03/05 20:45:00 by mstratu          ###   ########.fr       */
+/*   Created: 2019/03/05 21:02:58 by mstratu           #+#    #+#             */
+/*   Updated: 2019/03/05 21:14:41 by mstratu          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
-#include <unistd.h>
 
-void	ft_putnbr(int n)
+char        *ft_strupper(char *s)
 {
-	unsigned int	num;
-	char			c;
+	int		i;
 
-	if (n < 0)
+	i = 0;
+	while (s[i])
 	{
-		write(1, "-", 1);
-		num = (-1) * n;
+		s[i] = ft_toupper(s[i]);
+		i++;
 	}
-	else
-		num = n;
-	if (num > 9)
-		ft_putnbr(num / 10);
-	c = num % 10 + '0';
-	write(1, &c, 1);
+	return (s);
 }

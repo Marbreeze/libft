@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   ft_putendl.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: mstratu <mstratu@student.42.us.org>        +#+  +:+       +#+        */
+/*   By: mstratu <mstratu@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/02/25 23:45:37 by mstratu           #+#    #+#             */
-/*   Updated: 2019/02/25 23:46:00 by mstratu          ###   ########.fr       */
+/*   Updated: 2019/03/05 11:46:40 by mstratu          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,6 +14,8 @@
 
 void	ft_putendl(char const *s)
 {
+	if (!s)
+		return ;
 	write(1, s, ft_strlen(s));
 	write(1, "\n", 1);
 }

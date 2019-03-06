@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   ft_strequ.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: mstratu <mstratu@student.42.us.org>        +#+  +:+       +#+        */
+/*   By: mstratu <mstratu@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/02/25 23:10:01 by mstratu           #+#    #+#             */
-/*   Updated: 2019/02/25 23:11:59 by mstratu          ###   ########.fr       */
+/*   Updated: 2019/03/05 17:11:01 by mstratu          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,7 +17,9 @@ int		ft_strequ(char const *s1, char const *s2)
 	int i;
 
 	i = 0;
-	if (s1[i] && s2[i] && s1[i] == s2[i])
+	if (!s1 || !s2)
+		return (0);
+	while (s1[i] && s2[i] && s1[i] == s2[i])
 	{
 		i++;
 	}

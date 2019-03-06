@@ -1,32 +1,31 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_putnbr.c                                        :+:      :+:    :+:   */
+/*   ft_ismin.c                                         :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: mstratu <mstratu@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2019/02/25 23:48:50 by mstratu           #+#    #+#             */
-/*   Updated: 2019/03/05 20:45:00 by mstratu          ###   ########.fr       */
+/*   Created: 2019/03/05 17:52:14 by mstratu           #+#    #+#             */
+/*   Updated: 2019/03/05 21:16:37 by mstratu          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
-#include <unistd.h>
 
-void	ft_putnbr(int n)
+int	ft_ismin(int *s)
 {
-	unsigned int	num;
-	char			c;
+    int i;
+    int ans;
 
-	if (n < 0)
-	{
-		write(1, "-", 1);
-		num = (-1) * n;
-	}
-	else
-		num = n;
-	if (num > 9)
-		ft_putnbr(num / 10);
-	c = num % 10 + '0';
-	write(1, &c, 1);
+    i = 0;
+    ans = 0;
+    if (!s)
+        return (0);
+    while(s[i])
+    {
+        if (s[i] < ans)
+        ans = s[i];
+        i++;
+    }
+    return (ans);
 }

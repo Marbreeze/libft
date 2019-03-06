@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   ft_strrchr.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: mstratu <mstratu@student.42.us.org>        +#+  +:+       +#+        */
+/*   By: mstratu <mstratu@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/02/25 22:00:21 by mstratu           #+#    #+#             */
-/*   Updated: 2019/02/25 23:36:51 by mstratu          ###   ########.fr       */
+/*   Updated: 2019/02/26 20:40:51 by mstratu          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -21,14 +21,9 @@ char	*ft_strrchr(const char *s, int c)
 	{
 		i++;
 	}
-	i--;
-	while (s[i])
-	{
-		if (s[i] == c)
-			return (&(s[i]));
+	while (i > 0 && s[i] != (char)c)
 		i--;
-	}
-	if (s[i] == c)
-		return (&(s[i]));
+	if (s[i] == (char)c)
+		return ((char *)&s[i]);
 	return (NULL);
 }

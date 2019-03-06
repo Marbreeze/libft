@@ -3,32 +3,33 @@
 /*                                                        :::      ::::::::   */
 /*   ft_memmove.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: mstratu <marvin@42.fr>                     +#+  +:+       +#+        */
+/*   By: mstratu <mstratu@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/02/24 21:55:36 by mstratu           #+#    #+#             */
-/*   Updated: 2019/02/24 23:21:51 by mstratu          ###   ########.fr       */
+/*   Updated: 2019/03/05 20:40:27 by mstratu          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <string.h>
+#include "libft.h"
 
 void			*ft_memmove(void *dst, const void *src, size_t n)
 {
-	size_t		g;
-	size_t		i;
-	char		*cdst;
-	char		*csrc;
+	const char	*s;
+	const char	*lasts;
+	char		*d;
+	char		*lastd;
 
-	cdst = (char *)dst;
-	csrc = (char *)src;
-	i = 0;
-	g = 0;
-	while (i < n && csrc[g])
+	d = dst;
+	s = src;
+	if (d < s)
+		while (n--)
+			*d++ = *s++;
+	else
 	{
-		cdst[i] = csrc[g];
-		i++;
-		g++;
+		lasts = s + (n - 1);
+		lastd = d + (n - 1);
+		while (n--)
+			*lastd-- = *lasts--;
 	}
-	cdst[i] = '\0';
 	return (dst);
 }

@@ -3,17 +3,19 @@
 /*                                                        :::      ::::::::   */
 /*   ft_itoa.c                                          :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: mstratu <mstratu@student.42.us.org>        +#+  +:+       +#+        */
+/*   By: mstratu <mstratu@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/02/25 23:22:57 by mstratu           #+#    #+#             */
-/*   Updated: 2019/02/25 23:24:38 by mstratu          ###   ########.fr       */
+/*   Updated: 2019/03/05 21:26:47 by mstratu          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include <string.h>
 #include <stdio.h>
+#include <stdlib.h>
+#include "libft.h"
 
-int			get_len(int x)
+static int	get_len(int x)
 {
 	int		c;
 
@@ -32,8 +34,9 @@ int			get_len(int x)
 
 char		*ft_itoa(int n)
 {
-	char	*fresh;
-	int		j;
+	char			*fresh;
+	unsigned int	num;
+	int				j;
 
 	j = get_len(n);
 	fresh = (char *)malloc(sizeof(char) * (j + 1));
@@ -41,15 +44,18 @@ char		*ft_itoa(int n)
 		return (NULL);
 	fresh[j] = '\0';
 	j--;
+	fresh[j] = '0';
 	if (n < 0)
 	{
 		fresh[0] = '-';
-		n = n * (-1);
+		num = n * (-1);
 	}
-	while (n)
+	else
+		num = n;
+	while (num)
 	{
-		fresh[j] = ((n % 10) + '0');
-		n /= 10;
+		fresh[j] = ((num % 10) + '0');
+		num /= 10;
 		j--;
 	}
 	return (fresh);

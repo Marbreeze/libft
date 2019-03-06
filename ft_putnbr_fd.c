@@ -3,16 +3,30 @@
 /*                                                        :::      ::::::::   */
 /*   ft_putnbr_fd.c                                     :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: mstratu <mstratu@student.42.us.org>        +#+  +:+       +#+        */
+/*   By: mstratu <mstratu@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/02/25 23:48:20 by mstratu           #+#    #+#             */
-/*   Updated: 2019/02/25 23:48:38 by mstratu          ###   ########.fr       */
+/*   Updated: 2019/03/01 17:31:03 by mstratu          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-void	ft_putnbr_fd(int n, int fd)
+void				ft_putnbr_fd(int n, int fd)
 {
-	write(fd, ft_itoa(n), ft_strlen(ft_itoa(n)));
+	unsigned int	num;
+	char			c;
+
+	if (n < 0)
+	{
+		write(fd, "-", 1);
+		num = (-1) * n;
+	}
+	else
+		num = n;
+	if (num > 9)
+		ft_putnbr_fd(num / 10, fd);
+	c = num % 10 + '0';
+	write(fd, &c, 1);
 }
+

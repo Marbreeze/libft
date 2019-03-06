@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   ft_strncat.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: mstratu <mstratu@student.42.us.org>        +#+  +:+       +#+        */
+/*   By: mstratu <mstratu@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/02/25 22:36:59 by mstratu           #+#    #+#             */
-/*   Updated: 2019/02/25 22:40:52 by mstratu          ###   ########.fr       */
+/*   Updated: 2019/02/28 18:06:53 by mstratu          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,18 +14,19 @@
 
 char		*ft_strncat(char *dest, const char *src, size_t n)
 {
-	int		g;
 	size_t	i;
+	size_t	j;
 
 	i = 0;
-	g = 0;
+	j = 0;
 	while (dest[i])
 		i++;
-	while (i < n && src[g] != '\0')
+	while (j < n && src[j])
 	{
-		dest[i] = src[g];
+		dest[i] = src[j];
 		i++;
-		g++;
+		j++;
 	}
+	dest[i] = '\0';
 	return (dest);
 }

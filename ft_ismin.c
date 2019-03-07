@@ -6,26 +6,26 @@
 /*   By: mstratu <mstratu@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/03/05 17:52:14 by mstratu           #+#    #+#             */
-/*   Updated: 2019/03/05 21:16:37 by mstratu          ###   ########.fr       */
+/*   Updated: 2019/03/06 15:32:41 by mstratu          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-int	ft_ismin(int *s)
+int		ft_ismin(int *s)
 {
-    int i;
-    int ans;
+	int i;
+	int ans;
 
-    i = 0;
-    ans = 0;
-    if (!s)
-        return (0);
-    while(s[i])
-    {
-        if (s[i] < ans)
-        ans = s[i];
-        i++;
-    }
-    return (ans);
+	i = 0;
+	ans = s[0];
+	if (!s)
+		return (0);
+	while (s[i])
+	{
+		if (s[i] < ans)
+			ans = s[i];
+		i++;
+	}
+	return (ans);
 }

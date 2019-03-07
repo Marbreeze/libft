@@ -6,14 +6,14 @@
 /*   By: mstratu <mstratu@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/02/25 23:48:50 by mstratu           #+#    #+#             */
-/*   Updated: 2019/03/05 20:45:00 by mstratu          ###   ########.fr       */
+/*   Updated: 2019/03/06 15:49:48 by mstratu          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 #include <unistd.h>
 
-void	ft_putnbr(int n)
+void				ft_putnbr(int n)
 {
 	unsigned int	num;
 	char			c;
@@ -30,3 +30,4 @@ void	ft_putnbr(int n)
 	c = num % 10 + '0';
 	write(1, &c, 1);
 }
+

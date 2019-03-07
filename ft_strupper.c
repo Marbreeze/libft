@@ -6,13 +6,13 @@
 /*   By: mstratu <mstratu@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/03/05 21:02:58 by mstratu           #+#    #+#             */
-/*   Updated: 2019/03/05 21:14:41 by mstratu          ###   ########.fr       */
+/*   Updated: 2019/03/06 15:33:51 by mstratu          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-char        *ft_strupper(char *s)
+char		*ft_strupper(char *s)
 {
 	int		i;
 

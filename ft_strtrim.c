@@ -6,7 +6,7 @@
 /*   By: mstratu <mstratu@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/02/25 23:44:05 by mstratu           #+#    #+#             */
-/*   Updated: 2019/03/06 16:38:13 by mstratu          ###   ########.fr       */
+/*   Updated: 2019/03/06 16:43:00 by mstratu          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -23,9 +23,9 @@ char			*ft_strtrim(char const *s)
 
 	i = 0;
 	j = 0;
-	n = ft_strlen(s) - 1;
 	if (!s)
 		return (NULL);
+	n = ft_strlen(s) - 1;
 	while (s[i] && (s[i] == ' ' || s[i] == '\n' || s[i] == '\t'))
 		++i;
 	while (s[n] && n >= i && (s[n] == ' ' || s[n] == '\n' || s[n] == '\t'))

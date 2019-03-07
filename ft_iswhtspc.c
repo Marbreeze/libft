@@ -6,11 +6,11 @@
 /*   By: mstratu <mstratu@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/03/06 21:06:26 by mstratu           #+#    #+#             */
-/*   Updated: 2019/03/06 21:06:47 by mstratu          ###   ########.fr       */
+/*   Updated: 2019/03/06 21:27:51 by mstratu          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-int		ft_iswhitespace(char c)
+int		ft_iswhtspc(char c)
 {
 	return (c == ' ' || c == '\n' || c == '\t' ||
 			c == '\f' || c == '\r' || c == '\v');

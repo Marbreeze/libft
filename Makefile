@@ -6,7 +6,7 @@
 #    By: mstratu <mstratu@student.42.fr>            +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2019/02/24 23:27:12 by mstratu           #+#    #+#              #
-#    Updated: 2019/03/06 20:40:31 by mstratu          ###   ########.fr        #
+#    Updated: 2019/03/06 21:08:39 by mstratu          ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -22,7 +22,7 @@ ft_isascii.c ft_lstmap.c ft_putchar_fd.c ft_strcpy.c ft_strmapi.c ft_strtrim.c \
 ft_isdigit.c ft_lstnew.c ft_putendl.c ft_strdel.c ft_strncat.c ft_strupper.c \
 ft_ismax.c ft_memalloc.c ft_putendl_fd.c ft_strdup.c ft_strncmp.c ft_tolower.c \
 ft_ismin.c ft_memccpy.c ft_putnbr.c ft_strequ.c ft_strncpy.c ft_toupper.c \
-ft_isprint.c ft_memchr.c ft_putnbr_fd.c ft_striter.c ft_strnequ.c
+ft_isprint.c ft_memchr.c ft_putnbr_fd.c ft_striter.c ft_strnequ.c ft_iswhitespace.c
 
 OBJ = ft_itoa.o ft_memcmp.o ft_putstr.o ft_striteri.o ft_strnew.o \
 ft_lst_push.o ft_memcpy.o ft_putstr_fd.o ft_strjoin.o ft_strnstr.o \
@@ -34,7 +34,7 @@ ft_isascii.o ft_lstmap.o ft_putchar_fd.o ft_strcpy.o ft_strmapi.o ft_strtrim.o \
 ft_isdigit.o ft_lstnew.o ft_putendl.o ft_strdel.o ft_strncat.o ft_strupper.o \
 ft_ismax.o ft_memalloc.o ft_putendl_fd.o ft_strdup.o ft_strncmp.o ft_tolower.o \
 ft_ismin.o ft_memccpy.o ft_putnbr.o ft_strequ.o ft_strncpy.o ft_toupper.o \
-ft_isprint.o ft_memchr.o ft_putnbr_fd.o ft_striter.o ft_strnequ.o
+ft_isprint.o ft_memchr.o ft_putnbr_fd.o ft_striter.o ft_strnequ.o ft_iswhitespace.o
 
 INCLUDES=./
 
